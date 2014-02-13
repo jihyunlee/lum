@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+		<title>LUM</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<link rel="stylesheet" type="text/css" href="css/styletwo.css" media="screen"/> 
+        <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+        <script language="javascript" type="text/javascript" src="js/lampy001.js"></script>
+	</head>
+	
+	<body>
+   		<br/><br/><br/>
+		<h1>Set Sally's Daily Routine</h1>
+            
+        <p><img class="wakeupimg" width="60" height="60" align="middle"> WakeUp </p>
+        	 
+        <input name="timeInput_h" id="wakeUpTime_h" value ="0" type="number" min="1" max="24" size="1" onchange="changeTime(this.name, this.id, this.value)">
+        :
+        <input name="timeInput_m" id="wakeUpTime_m" type="number" min="0" max="60" size="1" onchange="changeTime(this.name, this.id, this.value)">
+        <br>
+          
+        <p><img class="nighttimeimg" width="60" height="60" align="middle"> Bed Time </p>
+        <input name="timeInput_h" id="sleepingTime_h" type="number" min="1" max="24" size="1" onchange="changeTime(this.name, this.id, this.value)">
+        :
+        <input name="timeInput_m" id="sleepingTime_m" type="number" min="0" max="60" size="1" onchange="changeTime(this.name, this.id, this.value)">
+        <br>
+        
+        <p><img class="naptimeimg" width="60" height="60" align="middle"> Nap Time </p>
+        <input name="timeInput_h" id="nappingTime_h" type="number" min="1" max="24" size="1" onchange="changeTime(this.name, this.id, this.value)">
+        :
+        <input name="timeInput_m" id="nappingTime_m"type="number" min="0" max="60" size="1" onchange="changeTime(this.name, this.id, this.value)">
+        <br>
+        
+        <form>
+            Allow Naps:
+            <input type="checkbox" id="napCheck"><br>
+            Nap Duration:<br>
+            <input name="timeInput_m" id="napDuration" value ="8" type="number" min="0" max="600" size="1" onchange="changeTime(this.name, this.id, this.value)"><br>
+            <button type="button" onclick="napRoutine(napDuration.value)">Quick Nap!</button>
+        </form>
+
+	    <div id="back-button"><button style="padding: 10px 20px 11px !important; font-size: 21px !important; background-color: #D3D3D3; font-weight: bold; text-shadow: 1px 1px #A9A9A9; color: #ffffff; border-radius: 100px; -moz-border-radius: 100px; -webkit-border-radius: 100px; border: 1px solid #A9A9A9; cursor: pointer; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;" type="button" onclick="window.location='index.html';"> BACK </button></div>
+	</body>
+</html>
