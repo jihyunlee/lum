@@ -1,7 +1,7 @@
 LUM
 ===
 
-<a href="http://jihyunlee.github.io/lum/">Come check out the LUM!</a>
+<a href="http://jihyunlee.github.io/lum/">check out the LUM!</a>
 
 This is a project collaborated with Pedro Galvao and Su Hyun Kim.
 
