@@ -1,4 +1,4 @@
-lum
+LUM
 ===
 
 <a href="http://jihyunlee.github.io/lum/">Come check out the LUM!</a>
