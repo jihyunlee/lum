@@ -80,18 +80,16 @@ function tick(){
 
 	clock.innerHTML = out;
 
-
-	lampStatus.innerHTML = getStatus(h,m);
+//	lampStatus.innerHTML = getStatus(h,m);
 
 	checkMySchedule();
-
 }
 
-
-
-
 function checkMySchedule(){
-	napModeOn = document.getElementById("napCheck").checked;
+	var napCheck = document.getElementById("napCheck");
+	if(napCheck == null) return;
+	
+	napModeOn = napCheck.checked;
 
 	if(quickNap != true){
 		var status = lampStatus.innerHTML;
@@ -146,14 +144,21 @@ function myDelay(delay, thisStatus, newStatus){
 
 //Display
 function formatDisplay(){
-	document.getElementById("wakeUpTime_h").value = formatForDisplay(wak_h);
-	document.getElementById("wakeUpTime_m").value = formatForDisplay(wak_m);
 
-	document.getElementById("sleepingTime_h").value = formatForDisplay(bed_h);
-	document.getElementById("sleepingTime_m").value = formatForDisplay(bed_m);
+	var wakeUpTime_h = document.getElementById("wakeUpTime_h");
+	if(wakeUpTime_h) wakeUpTime_h.value = formatForDisplay(wak_h);
+	var wakeUpTime_m = document.getElementById("wakeUpTime_m");
+	if(wakeUpTime_m) wakeUpTime_m.value = formatForDisplay(wak_m);
 
-	document.getElementById("nappingTime_h").value = formatForDisplay(nap_h);
-	document.getElementById("nappingTime_m").value = formatForDisplay(nap_m);
+	var sleepingTime_h = document.getElementById("sleepingTime_h");
+	if(sleepingTime_h) sleepingTime_h.value = formatForDisplay(bed_h);
+	var sleepingTime_m = document.getElementById("sleepingTime_m");
+	if(sleepingTime_m) sleepingTime_m.value = formatForDisplay(bed_m);
+
+	var nappingTime_h =	document.getElementById("nappingTime_h");
+	if(nappingTime_h) nappingTime_h.value = formatForDisplay(nap_h);
+	var nappingTime_m = document.getElementById("nappingTime_m");
+	if(nappingTime_m) nappingTime_m.value = formatForDisplay(nap_m);
 }
 
 function changeTime(name, id, val){
